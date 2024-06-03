@@ -1,0 +1,16 @@
+$schema: "https://moonrepo.dev/schemas/toolchain.json"
+
+bun:
+  syncProjectWorkspaceDependencies: true
+
+node:
+   packageManager: bun
+
+rust: 
+  bins:
+    - 'cargo-component@0.13.2'
+    - 'cargo-make@0.37.12'
+    #- 'cargo-nextest'
+    #- 'wasm-pack'
+
+typescript: {}
