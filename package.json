@@ -9,12 +9,9 @@
   "scripts": {
     "build": "moon run :build",
     "clean": "moon run clean",
-    "elm-build": "moon run elm-build",
     "pruge": "moon run pruge",
     "check-elm-docs": "moon run check-elm-docs",
-    "postinstall": "elm-tooling install",
-    "list-projects": "moon project-graph --json | bunx --bun node-jq '.projects| keys[]'",
-    "morphirjs": "moon run js-cli:run"
+    "list-projects": "moon project-graph --json | bunx --bun node-jq '.projects| keys[]'"
   },
   "devDependencies": {
     "node-jq": "4.4.0"
