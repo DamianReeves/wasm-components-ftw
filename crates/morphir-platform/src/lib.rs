@@ -9,8 +9,8 @@ struct Component;
 
 impl command_runner::Guest for Component {
     fn run(args: Vec<String>) -> Result<String, ()> {
-        println!("Args are: {:?}", args);
         let args_str = format!("Arguments are: {:?}", args);
+        println!("Args are: {:?}", args_str);
         Ok(args_str.to_string())
     }
 }

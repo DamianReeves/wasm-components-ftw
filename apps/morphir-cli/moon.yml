@@ -32,7 +32,7 @@ tasks:
    command: 'jco'
    args:
     - 'transpile'
-    - '$MOON_WORKSPACE_ROOT/crates/morphir-platform/dist/morphir_platform.wasm'
+    - '$workspaceRoot/crates/morphir-platform/dist/morphir_platform.wasm'
     - '-o'
     - '@out(0)'
    inputs:
@@ -64,3 +64,25 @@ tasks:
     - target: "~:copy-wasm-files"
    options:
     runDepsInParallel: false # Run the dependencies here in sequence so the build can depend on the transpiled wasm
+  clean-build-artifacts:
+    command: 'rm'
+    args: 
+      - '-rf'
+      - 'dist/'
+    inputs: []
+    options:
+     cache: false
+  clean-generated:
+    command: 'rm'
+    args: 
+      - '-rf'
+      - 'src/generated/'
+    inputs: []
+    options:
+     cache: false
+  clean:
+    inputs: []
+    deps:
+      - target: "~:clean-build-artifacts"
+      - target: "~:clean-generated"
+      - target: "morphir-platform:clean"

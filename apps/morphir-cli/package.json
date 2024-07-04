@@ -4,11 +4,12 @@
   "type": "module",
   "main": "./dist/index.js",
   "scripts": {
-    "run": "bun run ./dist/index.js",
+    "run": "node ./dist/index.js",
     "build-js": "moon run morphir-cli:build-js",
     "build": "moon run morphir-cli:build"
   },
   "devDependencies": {
+    "@bytecodealliance/jco": "1.3.1",
     "@tsconfig/node18": "^18.2.4",
     "@types/bun": "^1.1.3",
     "typescript": "5.4.5"

@@ -7,9 +7,9 @@
     "tools/*"
   ],
   "scripts": {
-    "build": "moon run :build",
-    "clean": "moon run clean",
-    "pruge": "moon run pruge",
+    "build": "moon run morphir-cli:build -u",
+    "clean": "moon run :clean",
+    "purge": "moon run :purge",
     "check-elm-docs": "moon run check-elm-docs",
     "list-projects": "moon project-graph --json | bunx --bun node-jq '.projects| keys[]'"
   },

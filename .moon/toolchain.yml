@@ -4,7 +4,7 @@ bun:
   syncProjectWorkspaceDependencies: true
 
 node:
-   packageManager: bun
+   packageManager: npm
 
 rust: 
   bins:
